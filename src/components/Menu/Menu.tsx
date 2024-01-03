@@ -7,9 +7,9 @@ import { IMenu } from '../../utils/interfaces';
 const Menu:React.FC<Partial<IMenu>> = ({toggleMenu}) => {
   return (
     <SC.MenuStyled>
-      <nav>
+      <SC.NavBar>
         {navBar.map(({id, path, name}) => <SC.Items key={id} onClick={toggleMenu}><a href={path}>{name}</a></SC.Items>)}
-      </nav>
+      </SC.NavBar>
       <LinkBtn path='#' content='Schedule a Call'/>
     </SC.MenuStyled>
   );
