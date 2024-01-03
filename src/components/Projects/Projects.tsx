@@ -21,7 +21,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section>
+    <section id="projects">
       <SC.ImageCon>
         <img src={projects[currentProject].image} alt="project" />
         <SC.TitleCon>

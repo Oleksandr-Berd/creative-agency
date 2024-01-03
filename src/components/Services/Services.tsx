@@ -11,7 +11,7 @@ const Services: React.FC = () => {
 
   return (
     <SC.CommonCon
-      id="services"
+      id="service"
       bg={imgService}
       size={complySize(windowWidth, initialSize, initialWindowWidth)}
     >

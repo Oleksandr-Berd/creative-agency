@@ -11,3 +11,8 @@ export interface ILink {
 export interface AdjustSizeProps {
     complySize:(windowWidth:number, initialSize:number, initialWindowWidth:number) => string
 }
+
+export interface IMenu {
+    toggleMenu:()=>void,
+    isMenu:boolean,
+}
