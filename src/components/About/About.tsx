@@ -1,17 +1,22 @@
 import * as SC from "./AboutStyle";
 
-import bgHero from "../../assets/images/mobile/image-hero.jpg";
+import bgHeroMob from "../../assets/images/mobile/image-hero.jpg";
+import bgHeroTab from '../../assets/images/tablet/image-hero.jpg'
+
 import LinkBtn from "../../ui/LinkBtn/LinkBtn";
 import { complySize } from "../../services/helpers";
+import { useMediaQuery } from "usehooks-ts";
 
 const About: React.FC = () => {
   const windowWidth = window.innerWidth;
   const initialWindowWidth = 375;
   const initialSize = 200;
 
+  const isTablet = useMediaQuery("(min-width:768px)")
+
   return (
     <SC.CommonCon
-      bg={bgHero}
+      bg={isTablet ? bgHeroTab : bgHeroMob}
       id="about"
       size={complySize(windowWidth, initialSize, initialWindowWidth)}
     >
