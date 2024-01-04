@@ -6,6 +6,7 @@ size:string;
 export interface ILink {
     path:string,
     content:string,
+    position?:string;
 }
 
 export interface AdjustSizeProps {
@@ -15,4 +16,7 @@ export interface AdjustSizeProps {
 export interface IMenu {
     toggleMenu:()=>void,
     isMenu:boolean,
+}
+
+export interface ILinkBtn {
 }

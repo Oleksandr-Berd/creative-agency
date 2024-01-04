@@ -30,6 +30,8 @@ export const MenuStyled = styled.menu`
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    background-color: transparent;
   }
 `;
 
@@ -62,6 +64,11 @@ export const Items = styled.li`
   }
 
   @media (min-width: 768px){
+
+    & > *{
+        font-size: 15px;
+        line-height: 2.13;
+    }
 
 &:not(:last-child){
     margin-bottom: 0;

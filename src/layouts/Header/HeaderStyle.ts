@@ -12,20 +12,13 @@ padding-left: 24px;
 padding-right: 24px;
 
 @media (min-width: 768px){
-    padding: 0;
+    padding-top: 57px;
+    padding-bottom: 57px;
+    padding-left: 39px;
+    padding-right: 40px;
+
+    background: linear-gradient(to right, rgb(242, 242, 242) 40%, rgb(249, 79, 79) 60%);
+
 }
 `
 
-export const TabCommonCon = styled.div`
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
-`
-
-export const LogoCon = styled.div`
-padding-top: 74px;
-padding-left: 39px;
-
-margin-right: 130px;
-`

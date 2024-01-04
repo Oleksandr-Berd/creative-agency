@@ -12,19 +12,10 @@ const Header: React.FC<IMenu> = ({ toggleMenu, isMenu }) => {
 
   return (
     <SC.HeaderStyled>
-      {isTablet ? (
-        <SC.TabCommonCon>
-          <SC.LogoCon>
-            <Logo />
-          </SC.LogoCon>
-          <Menu />
-        </SC.TabCommonCon>
-      ) : (
-        <>
+     
           <Logo />
-          <BurgerMenu toggleMenu={toggleMenu} isMenu={isMenu} />
-        </>
-      )}
+          {isTablet ? <Menu position="header"/> : <BurgerMenu toggleMenu={toggleMenu} isMenu={isMenu} />}
+        
     </SC.HeaderStyled>
   );
 };
