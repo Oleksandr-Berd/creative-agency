@@ -4,6 +4,7 @@ import * as SC from "./ServicesStyle";
 
 import imgServiceMob from "../../assets/images/mobile/image-strategic.jpg";
 import imgServiceTab from '../../assets/images/tablet/image-strategic.jpg'
+import waveRed from '../../assets/images/tablet/red_wave.svg'
 import { complySize } from "../../services/helpers";
 import ServicesList from "./ServicesList";
 
@@ -20,7 +21,7 @@ const Services: React.FC = () => {
       bg={isTablet ? imgServiceTab : imgServiceMob}
       size={complySize(windowWidth, initialSize, initialWindowWidth)}
     >
-      <SC.IntroCon>
+      <SC.IntroCon bg={isTablet ? waveRed : ""}>
         <SC.Title>
           <span>Design</span> is strategic.
         </SC.Title>

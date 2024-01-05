@@ -17,7 +17,7 @@ export const CommonCon = styled.section<IStyles>`
   }
 `;
 
-export const IntroCon = styled.div`
+export const IntroCon = styled.div<Partial <IStyles>>`
   padding-top: 72px;
   padding-bottom: 72px;
   padding-left: 24px;
@@ -26,6 +26,8 @@ export const IntroCon = styled.div`
   background-color: #191921;
 
   @media (min-width: 768px) {
+position: relative;
+
     width: 51%;
 
     margin-left: auto;
@@ -36,6 +38,14 @@ export const IntroCon = styled.div`
     padding-right: 40px;
 
     text-align: left;
+
+    &:before{
+        content: url(${props => props.bg});
+        position: absolute;
+        z-index: 1;
+       
+        transform: translateX(-100px) translateY(25px);
+    }
   }
 `;
 
