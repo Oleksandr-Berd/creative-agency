@@ -48,6 +48,10 @@ margin-bottom: 24px;
     margin-bottom: 0;
     margin-right: 28px;
   }
+
+  @media (min-width: 1440px){
+    margin-right: 47px;
+  }
 `;
 
 export const Items = styled.li`
@@ -77,4 +81,22 @@ export const Items = styled.li`
     margin-right: 20px;
 }
 }
+
+@media (min-width: 1440px) {
+  & > * {
+    font-size: 16px;
+    line-height: 2;
+  }
+
+  & > *:hover,
+  & > *:focus {
+    font-family: "ComExtraBold";
+    cursor: pointer;
+  }
+
+  &:not(:last-child) {
+    margin-right: 32px;
+  }
+}
+
 `;
