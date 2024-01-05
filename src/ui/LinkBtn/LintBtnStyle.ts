@@ -14,14 +14,14 @@ background-color: #f94f4f;
 color: #fff;
 
 @media (min-width: 768px){
-    padding-top: ${props => props.position === "header" ? "23px" : "25px"};
-    padding-bottom: ${props => props.position === "header" ? "22px" : "25px"};
-    padding-left: ${props => props.position === "header" ? "19px" : "40px"};
-    padding-right: ${props => props.position === "header" ? "18px" : "41px"};
+    padding-top: ${props => props.position === "header" ? "23px" : "footer" ? "23px" : "25px"};
+    padding-bottom: ${props => props.position === "header" ? "22px" : "footer" ? "21px" : "25px"};
+    padding-left: ${props => props.position === "header" ? "19px" : "footer" ? "45px" : "40px"};
+    padding-right: ${props => props.position === "header" ? "18px" : "footer" ? "44px" : "41px"};
 
     background-color: ${props => props.position === "header" ? "#191921" : "#f94f4f"};
 
-    font-size: ${props => props.position === "header" ? "16px" : "18px"};
+    font-size: ${props => props.position === "header" || props.position === "footer" ? "16px" : "18px"};
 
 }
 `
