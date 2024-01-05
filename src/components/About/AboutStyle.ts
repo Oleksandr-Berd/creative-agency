@@ -19,6 +19,15 @@ export const CommonCon = styled.section<IStyles>`
     background-position: right;
     background-size: 60% 100%;
   }
+
+  @media (min-width: 1440px) {
+    padding-top: 112px;
+    padding-bottom: 160px;
+    padding-left: 165px;
+    padding-right: 722px;
+
+    background-size: auto;
+  }
 `;
 
 export const ContentCon = styled.div`
@@ -27,7 +36,7 @@ export const ContentCon = styled.div`
   padding-left: 24px;
   padding-right: 24px;
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     padding: 0;
   }
 `;
@@ -40,10 +49,17 @@ export const Title = styled.h1`
 
   color: #000;
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     margin-bottom: 19px;
 
     font-size: 56px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 39px;
+
+    font-size: 80px;
+    line-height: 1.1;
   }
 `;
 
@@ -56,7 +72,14 @@ export const Body = styled.p`
 
   color: #000;
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     margin-bottom: 32px;
+  }
+
+  @media (min-width: 1440px){
+margin-bottom: 48px;
+
+    font-size: 18px;
+    line-height: 1.78;
   }
 `;

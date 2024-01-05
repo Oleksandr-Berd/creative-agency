@@ -2,6 +2,7 @@ import * as SC from "./AboutStyle";
 
 import bgHeroMob from "../../assets/images/mobile/image-hero.jpg";
 import bgHeroTab from '../../assets/images/tablet/image-hero.jpg'
+import bgHeroDesk from '../../assets/images/desktop/image-hero.jpg'
 
 import LinkBtn from "../../ui/LinkBtn/LinkBtn";
 import { complySize } from "../../services/helpers";
@@ -13,10 +14,11 @@ const About: React.FC = () => {
   const initialSize = 200;
 
   const isTablet = useMediaQuery("(min-width:768px)")
+  const isDesk = useMediaQuery("(min-width:1440px)")
 
   return (
     <SC.CommonCon
-      bg={isTablet ? bgHeroTab : bgHeroMob}
+      bg={isDesk ? bgHeroDesk : isTablet ? bgHeroTab : bgHeroMob}
       id="about"
       size={complySize(windowWidth, initialSize, initialWindowWidth)}
     >
