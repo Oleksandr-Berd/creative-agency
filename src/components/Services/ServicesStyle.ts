@@ -17,7 +17,7 @@ export const CommonCon = styled.section<IStyles>`
   }
 `;
 
-export const IntroCon = styled.div<Partial <IStyles>>`
+export const IntroCon = styled.div<Partial<IStyles>>`
   padding-top: 72px;
   padding-bottom: 72px;
   padding-left: 24px;
@@ -26,7 +26,7 @@ export const IntroCon = styled.div<Partial <IStyles>>`
   background-color: #191921;
 
   @media (min-width: 768px) {
-position: relative;
+    position: relative;
 
     width: 51%;
 
@@ -39,12 +39,27 @@ position: relative;
 
     text-align: left;
 
-    &:before{
-        content: url(${props => props.bg});
-        position: absolute;
-        z-index: 1;
-       
-        transform: translateX(-100px) translateY(25px);
+    &:before {
+      content: url(${(props) => props.bg});
+      position: absolute;
+      z-index: 1;
+
+      transform: translateX(-100px) translateY(25px);
+    }
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 200px;
+    padding-bottom: 400px;
+    padding-left: 154px;
+    padding-right: 106px;
+
+    &:before {
+      content: url(${(props) => props.bg});
+      position: absolute;
+      z-index: 1;
+
+      transform: translateX(-220px) translateY(25px);
     }
   }
 `;
@@ -67,6 +82,13 @@ export const Title = styled.h2`
 
     margin-bottom: 32px;
   }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 43px;
+
+    font-size: 56px;
+    line-height: 1.14;
+  }
 `;
 
 export const Body = styled.p`
@@ -80,6 +102,13 @@ export const Body = styled.p`
 
   @media (min-width: 768px) {
     margin-bottom: 32px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 48px;
+
+    font-size: 18px;
+    line-height: 1.78;
   }
 `;
 
@@ -98,6 +127,19 @@ export const CallBtn = styled.button`
   border: none;
 
   border-bottom: solid 2px #f94f4f;
+
+  @media (min-width: 1440px) {
+    font-size: 18px;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover,
+    &:focus {
+      color: #ff9393;
+      border-bottom: solid 2px #ff9393;
+
+      transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+  }
 `;
 
 export const ServiceListCon = styled.div`
@@ -121,6 +163,11 @@ export const ServiceListCon = styled.div`
     background-color: #f2f2f2;
     color: #000;
   }
+
+  @media (min-width: 1440px) {
+    padding-bottom: 368px;  
+    padding-left: 165px;
+  }
 `;
 
 export const ServicesList = styled.ul`
@@ -133,14 +180,21 @@ export const ServicesList = styled.ul`
     bottom: 0;
     right: 0;
 
-    /* transform: translateY(-120px); */
+    /* transform: translateY(-40px); */
 
-    width: 57%;
+    width: 62%;
 
     padding-top: 164px;
     padding-bottom: 120px;
     padding-left: 43px;
     padding-right: 40px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding-left: 285px;
+    padding-right: 106px;
   }
 `;
 
@@ -158,6 +212,16 @@ export const ListTitle = styled.h3`
 
     margin-bottom: 0;
   }
+
+  @media (min-width: 1440px) {
+position: relative;
+z-index: 2;
+
+    padding-top: 200px;
+
+    font-size: 56px;
+    line-height: 1.14;
+  }
 `;
 
 export const Item = styled.li`
@@ -167,6 +231,14 @@ export const Item = styled.li`
 
   &:not(:last-child) {
     margin-bottom: 84px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-left: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 100px;
+    }
   }
 `;
 
@@ -182,6 +254,11 @@ export const Count = styled.span`
   line-height: 1.1;
 
   color: rgba(255, 255, 255, 0.3);
+
+  @media (min-width: 1440px){
+  transform: translateX(-65%) translateY(-50%);
+
+  }
 `;
 
 export const ItemTitle = styled.h4`
@@ -190,10 +267,22 @@ export const ItemTitle = styled.h4`
   font-family: "ComExtraBold";
   font-size: 15px;
   line-height: 1.67;
+
+  @media (min-width: 1440px) {
+    margin-bottom: 24px;
+
+    font-size: 20px;
+    line-height: 1.6;
+  }
 `;
 
 export const ItemBody = styled.p`
   font-family: "ComReg";
   font-size: 15px;
   line-height: 1.67;
+
+  @media (min-width: 1440px){
+    font-size: 18px;
+    line-height: 1.78;
+  }
 `;

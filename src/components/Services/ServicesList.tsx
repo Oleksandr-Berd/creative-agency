@@ -5,7 +5,7 @@ import { servicesDb } from "../../db/servicesDb";
 const ServicesList: React.FC = () => {
   return (
     <SC.ServiceListCon>
-      <SC.ListTitle>Our approach for creating a winnig brand</SC.ListTitle>
+      <SC.ListTitle>Our approach for creating a winning brand</SC.ListTitle>
       <SC.ServicesList>
         {servicesDb.map(({ id, title, body }) => {
           const count = id < 10 ? "0" + id : id;
