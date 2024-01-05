@@ -6,11 +6,13 @@ import { projects } from "../../db/projectsDb";
 import { ReactComponent as Next } from "../../assets/images/desktop/icon-arrow-next.svg";
 import { ReactComponent as Prev } from "../../assets/images/desktop/icon-arrow-previous.svg";
 import whiteWaveTab from '../../assets/images/tablet/white_wave.svg'
+import whiteWaveDesk from '../../assets/images/desktop/bg-pattern-wavy-white.svg'
 
 const Projects: React.FC = () => {
   const [currentProject, setCurrentProject] = useState(0);
 
 const isTablet = useMediaQuery("(min-width:768px)")
+const isDesk = useMediaQuery("(min-width:1440px)")
 
   const handleProject = {
     increment: () => {
@@ -28,13 +30,13 @@ const isTablet = useMediaQuery("(min-width:768px)")
   return (
     <SC.CommonCon id="projects">
       <SC.ImageCon>
-        <img src={isTablet ? projects[currentProject].image.tab : projects[currentProject].image.mob} alt="project" />
+        <img src={isDesk ?projects[currentProject].image.desk  : isTablet ? projects[currentProject].image.tab : projects[currentProject].image.mob} alt="project" />
         <SC.TitleCon>
           <SC.Title>{projects[currentProject].title}</SC.Title>
           <SC.Date>{projects[currentProject].date}</SC.Date>
         </SC.TitleCon>
       </SC.ImageCon>
-      <SC.BottomCon bg={isTablet ? whiteWaveTab : ""}>
+      <SC.BottomCon bg={isDesk ? whiteWaveDesk : isTablet ? whiteWaveTab : ""}>
         <SC.SectionTitle>Brand naming & guidelines</SC.SectionTitle>
         <SC.ButtonCon>
           <button onClick={handleProject.decrement}>
