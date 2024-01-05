@@ -1,6 +1,9 @@
+import { useMediaQuery } from "usehooks-ts";
+
 import * as SC from "./ServicesStyle";
 
-import imgService from "../../assets/images/mobile/image-strategic.jpg";
+import imgServiceMob from "../../assets/images/mobile/image-strategic.jpg";
+import imgServiceTab from '../../assets/images/tablet/image-strategic.jpg'
 import { complySize } from "../../services/helpers";
 import ServicesList from "./ServicesList";
 
@@ -9,10 +12,12 @@ const Services: React.FC = () => {
   const initialWindowWidth = 375;
   const initialSize = 200;
 
+  const isTablet = useMediaQuery("(min-width:768px)")
+
   return (
     <SC.CommonCon
       id="service"
-      bg={imgService}
+      bg={isTablet ? imgServiceTab : imgServiceMob}
       size={complySize(windowWidth, initialSize, initialWindowWidth)}
     >
       <SC.IntroCon>
@@ -26,7 +31,7 @@ const Services: React.FC = () => {
         </SC.Body>
         <SC.CallBtn>Schedule a Call</SC.CallBtn>
       </SC.IntroCon>
-<ServicesList/>
+      <ServicesList />
     </SC.CommonCon>
   );
 };
