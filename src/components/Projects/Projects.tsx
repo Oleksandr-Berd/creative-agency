@@ -1,11 +1,16 @@
-import * as SC from "./ProjectsStyled";
 import { useState } from "react";
+import { useMediaQuery } from "usehooks-ts";
+
+import * as SC from "./ProjectsStyled";
 import { projects } from "../../db/projectsDb";
 import { ReactComponent as Next } from "../../assets/images/desktop/icon-arrow-next.svg";
 import { ReactComponent as Prev } from "../../assets/images/desktop/icon-arrow-previous.svg";
+import whiteWaveTab from '../../assets/images/tablet/white_wave.svg'
 
 const Projects: React.FC = () => {
   const [currentProject, setCurrentProject] = useState(0);
+
+const isTablet = useMediaQuery("(min-width:768px)")
 
   const handleProject = {
     increment: () => {
@@ -21,15 +26,15 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section id="projects">
+    <SC.CommonCon id="projects">
       <SC.ImageCon>
-        <img src={projects[currentProject].image} alt="project" />
+        <img src={isTablet ? projects[currentProject].image.tab : projects[currentProject].image.mob} alt="project" />
         <SC.TitleCon>
           <SC.Title>{projects[currentProject].title}</SC.Title>
           <SC.Date>{projects[currentProject].date}</SC.Date>
         </SC.TitleCon>
       </SC.ImageCon>
-      <SC.BottomCon>
+      <SC.BottomCon bg={isTablet ? whiteWaveTab : ""}>
         <SC.SectionTitle>Brand naming & guidelines</SC.SectionTitle>
         <SC.ButtonCon>
           <button onClick={handleProject.decrement}>
@@ -40,7 +45,7 @@ const Projects: React.FC = () => {
           </button>
         </SC.ButtonCon>
       </SC.BottomCon>
-    </section>
+    </SC.CommonCon>
   );
 };
 
